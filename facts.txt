@@ -1,0 +1,25 @@
+30 min
+32 2^5
+50 Half Century!
+60 Clock
+64 2^6
+82 El Camino Real
+84 Dumbarton Bridge
+85 To Umunhum
+88 Keys on a piano
+92 Half moon bay
+99 Kim Duyst to Wilde Jagd
+100 Gold Hopper
+101 Highway 101 to San Francisco
+108 108 is not real
+120 120 West Teal (delayed 13 min)
+124 124 was uniquogious, gasgderific, and lipimoferoservisting.
+128 2^7
+130 To Hamilton
+178 S.178 Sonata in B Minor
+190 Bench PR
+220 220 South Illini
+256 uint8_t
+265 Squat PR
+280 To San Jose
+300 max

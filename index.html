@@ -2,16 +2,19 @@
 <html>
     <head>
         <link rel="stylesheet" href="./style.css">
+        <script src="./facts.js" defer></script>
         <script src="./main.js" defer></script>
         <title>Metrora</title>
     </head>
     <body>
         <h2 id="tempo" style="color: lightblue"></h2>
         <div class="row">
+            <p onclick="addTempo(-15)">-15</p>
             <p onclick="addTempo(-5)">-5</p>
             <p onclick="addTempo(-1)">-1</p>
             <p onclick="addTempo(1)">+1</p>
             <p onclick="addTempo(5)">+5</p>
+            <p onclick="addTempo(15)">+15</p>
         </div>
         <br>
 
@@ -22,5 +25,11 @@
             <p onclick="addPh(.5)">+.5</p>
             <p onclick="addPh(.8)">+.8</p>
         </div>
+
+        <br>
+        <br>
+        <p id="fact" style="color: lightgreen"></p>
+        <br>
+        <p id="barbell" style="color: yellow"></p>
     </body>
 </html>
