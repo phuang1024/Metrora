@@ -2,28 +2,29 @@ let TEMPO = 100;
 
 
 function updateSystem() {
+    TEMPO = Math.round(TEMPO);
+    TEMPO = Math.max(Math.min(TEMPO, 300), 30);
     document.getElementById("tempo").innerHTML = TEMPO;
+    document.getElementById("ph").innerHTML = "pH: " + getPh(TEMPO).toFixed(2);
 }
 
 
-function tempoAddOne() {
-    TEMPO += 1;
+function addTempo(n) {
+    TEMPO += n;
     updateSystem();
 }
 
-function tempoSubOne() {
-    TEMPO -= 1;
+function getPh(n) {
+    return Math.log(n) / Math.log(2) * 10;
+}
+
+function setPh(n) {
+    TEMPO = Math.pow(2, n / 10);
     updateSystem();
 }
 
-function tempoAddFive() {
-    TEMPO += 5;
-    updateSystem();
-}
-
-function tempoSubFive() {
-    TEMPO -= 5;
-    updateSystem();
+function addPh(n) {
+    setPh(getPh(TEMPO) + n);
 }
 
 

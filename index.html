@@ -7,13 +7,20 @@
     </head>
     <body>
         <h2 id="tempo" style="color: lightblue"></h2>
-
         <div class="row">
-            <p onclick="tempoSubFive()">-5</p>
-            <p onclick="tempoSubOne()">-1</p>
-            <p onclick="tempoAddOne()">+1</p>
-            <p onclick="tempoAddFive()">+5</p>
+            <p onclick="addTempo(-5)">-5</p>
+            <p onclick="addTempo(-1)">-1</p>
+            <p onclick="addTempo(1)">+1</p>
+            <p onclick="addTempo(5)">+5</p>
         </div>
+        <br>
 
+        <h3 id="ph" style="color: lightblue"></h2>
+        <div class="row">
+            <p onclick="addPh(-.8)">-.8</p>
+            <p onclick="addPh(-.5)">-.5</p>
+            <p onclick="addPh(.5)">+.5</p>
+            <p onclick="addPh(.8)">+.8</p>
+        </div>
     </body>
 </html>
