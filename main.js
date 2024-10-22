@@ -1,13 +1,41 @@
 let TEMPO = 100;
+let METRONOME_ON = false;
+let TICK_FUNC = null;
+let METRONOME_SOUND = new Audio("tick.mp3");
 
 
 function updateSystem() {
     TEMPO = Math.round(TEMPO);
     TEMPO = Math.max(Math.min(TEMPO, 300), 30);
-    document.getElementById("tempo").innerHTML = TEMPO;
-    document.getElementById("ph").innerHTML = "pH: " + getPh(TEMPO).toFixed(2);
+
+    document.getElementById("tempo").innerHTML = "BPM: " + TEMPO;
+    document.getElementById("ph").innerHTML = "pH: " + getPh(TEMPO).toFixed(1);
     document.getElementById("fact").innerHTML = getFact(TEMPO);
     document.getElementById("barbell").innerHTML = calcBarbell(TEMPO);
+
+    if (TICK_FUNC != null) {
+        clearInterval(TICK_FUNC);
+    }
+    TICK_FUNC = setInterval(tickMetronome, 60000 / TEMPO);
+}
+
+
+function toggleMetronome() {
+    METRONOME_ON = !METRONOME_ON;
+}
+
+function tickMetronome() {
+    if (METRONOME_ON) {
+        // flash text color
+        let text = document.getElementById("tempo");
+        text.style.color = "red";
+        setTimeout(() => {
+            text.style.color = "lightblue";
+        }, 50);
+
+        // play sound
+        METRONOME_SOUND.play();
+    }
 }
 
 
